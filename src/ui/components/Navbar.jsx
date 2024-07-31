@@ -2,6 +2,11 @@ import { Link, NavLink } from 'react-router-dom';
 
 
 export const Navbar = () => {
+
+    const handleLogout = () => {
+        console.log('Logout')
+    }
+
     return (
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2">
             
@@ -40,6 +45,7 @@ export const Navbar = () => {
                     </span>
 
                     <button
+                        onClick={handleLogout}
                         className="nav-item nav-link btn"
                     >
                         Logout
