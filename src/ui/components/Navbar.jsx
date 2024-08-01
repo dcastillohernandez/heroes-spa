@@ -1,10 +1,15 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 
 
 export const Navbar = () => {
 
+    // Importamos el hook useNavigate de react-router-dom para redirigir entre rutas
+    const navigate = useNavigate();
+
     const handleLogout = () => {
-        console.log('Logout')
+        navigate('/login', {
+            replace: true
+        })
     }
 
     return (
