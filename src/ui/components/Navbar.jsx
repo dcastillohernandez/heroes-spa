@@ -26,7 +26,7 @@ export const Navbar = () => {
                 <div className="navbar-nav">
 
                     <NavLink
-                    /* De esta forma definimos la clase activa */
+                    /* De esta forma definimos la clase activa si estamos trabajando con boostrap */
                         className={({ isActive }) => `nav-item nav-link ${isActive ? 'active' : ''}`}
                         to="/marvel"
                     >
