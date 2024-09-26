@@ -1,4 +1,4 @@
-import { heroes } from '../data/data';
+import { heroes } from '../data';
 
 export const getHeroesByPublisher = (publicher) => {
 
