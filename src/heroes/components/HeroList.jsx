@@ -1,6 +1,8 @@
-import { getHeroesByPublisher } from "../helpers/getHeroesByPublisher";
+import { getHeroesByPublisher } from "../helpers";
 
 export const HeroList = ({ publisher }) => {
+
+    // Creamos la constante heroes y la inicializamos con la función getHeroesByPublisher que nos va a retornar una lista de heroes por publisher
     const heroes = getHeroesByPublisher(publisher);
 
     return (
@@ -8,11 +10,9 @@ export const HeroList = ({ publisher }) => {
             {/* 
             Cuando usamos heroes.map, retornamos una nueva lista de heroes donde la key es el id del heroe y el value es el superheroe, algo que podemos ver en el data.js
         */}
-            <li>
-                {heroes.map((hero) => (
-                    <li key={hero.id}>{hero.superhero}</li>
-                ))}
-            </li>
+            {heroes.map((hero) => (
+                <li key={hero.id}>{hero.superhero}</li>
+            ))}
         </ul>
     );
 };
