@@ -32,8 +32,7 @@ export const HeroCard = ({
                             {/* Si el alter_ego es distinto de characters, mostramos el characters, de esta forma evitamos mostrar el alter_ego doblemente */}
                             {/* Podemos ver que es cada propiedad dentro de el heroe en el data/data.js */}
                             {
-                                (alter_ego !== characters)
-                                && <p>{characters}</p>
+                                (alter_ego !== characters) && <p>{characters}</p>
                             }
 
                             <div className="card-text">
