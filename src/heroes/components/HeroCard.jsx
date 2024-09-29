@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 
 // Le pasamos el heroe como prop para que lo renderice en el componente HeroCard
 export const HeroCard = ({
@@ -26,7 +27,21 @@ export const HeroCard = ({
                     <div className="col-8">
                         <div className="card-body">
                             <h5 className="card-title">{superhero}</h5>
-                            <p className="card-text"></p>
+                            <p className="card-text">{alter_ego}</p>
+
+                            {/* Si el alter_ego es distinto de characters, mostramos el characters, de esta forma evitamos mostrar el alter_ego doblemente */}
+                            {/* Podemos ver que es cada propiedad dentro de el heroe en el data/data.js */}
+                            {
+                                (alter_ego !== characters)
+                                && <p>{characters}</p>
+                            }
+
+                            <div className="card-text">
+                                <small className="text-muted">{first_appearance}</small>
+                            </div>
+
+                            {/* Recordar siempre que la importacion de el Link en este caso debe de react-router-dom */}
+                            <Link to={`/hero/${id}`}>Mas...</Link>
                         </div>
                     </div>
 
@@ -35,5 +50,3 @@ export const HeroCard = ({
         </div>
     )
 }
-
-// Me quedé en el capítulo 126 minuto 7:24
